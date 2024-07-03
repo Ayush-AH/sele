@@ -37,6 +37,9 @@ nav{
     padding: .8vw 2vw;
     color: #A9ABB5;
 }
+nav img{
+    display: none;
+}
 #nav-left{
     display: flex;
     align-items: center;
@@ -227,9 +230,9 @@ nav button:hover{
 #page2 #down{
     position: absolute;
     top: -30%;
-    width: 100%;
+    width: calc(100% - 4vw);
     height: 45vh;
-    padding: 15px 40px;
+    padding: 15px 0;
     display: flex;
     align-items: end;
     justify-content: space-between;
@@ -244,7 +247,7 @@ nav button:hover{
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: calc(100% - 80px);
+    width: 100%;
     height: 1px;
     background-color: #ffffff4f;
 }
@@ -293,7 +296,7 @@ nav button:hover{
     align-items: center;
 }
 .line3{
-    width: calc(100% - 80px);
+    width: calc(100% - 4vw);
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -370,21 +373,22 @@ nav button:hover{
     flex-direction: column;
 }
 #page3 .igs h5{
-    font-size: 1vw;
+    font-size: 1.2vw;
     color: #fff;
-    font-weight: 500;
-    font-family: aty ;
+    font-weight: 400;
     transition: all ease 0.5s;
-    opacity: .7;
+    opacity: .5;
 
 }
 #page3 .igs h2{
-    font-size: 2vw;
+    font-size: 3vw;
     color: #fff;
-    font-weight: 600;
+    font-weight: 500;
     font-family: aty ;
+    text-transform: lowercase;
     transition: all ease 0.5s;
-    opacity: .7;
+    opacity: .4;
+    line-height: .7;
 
 
 }
@@ -394,14 +398,59 @@ nav button:hover{
 #page3 #right .igs{
     background-image: url(https://selemen.liqium.com/img/j3.jpg);
 }
-#page3 .over:hover .igs{
+#page3 .igs.hover{
 width: 100%;
 height: 100%;
 }
-#page3 .over:hover .igs h2,#page3 .over:hover .igs h5{
-    margin-top: 10px;
-    scale: 2;
+#page3 .hover h5,#page3 .hover h2{
+    margin-top: 20px;
+    scale: 1.8;
     opacity: 1;
+}
+#page3-mobile{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: none;
+}
+#page3-mobile .ig3{
+    height: 100%;
+    width: 100%;
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15vw;
+    color: #fff;
+    text-align: center;
+}
+#page3-mobile .ig3 h3{
+    font-weight: 100;
+    font-size: 3.5vw;
+    opacity: .5;
+}
+#page3-mobile .ig3 h5{
+    font-weight: 400;
+    font-size: 4.3vw;
+    margin-top: 30vw;
+}
+#page3-mobile .ig3 h2{
+    font-family: aty;
+    text-transform: lowercase;
+    font-weight: 500;
+    font-size: 10.8vw;
+    line-height: 1;
+}
+#page3-mobile .ig3 h4{
+    font-weight: 300;
+    margin-top: 38vw;
+    font-size: 3.6vw;
+    white-space: nowrap;
+    opacity: .7;
+}
+#page3-mobile .ig31{
+    background-image: url(https://selemen.liqium.com/img/j2.jpg);
+    background-size: cover;
 }
 #page4{
     height: 120vh;
@@ -465,11 +514,51 @@ height: 100%;
     background-image: url(https://selemen.liqium.com/img/b3.jpg);
     z-index: 3;
 }
+#page5-mobile{
+    width: 100%;
+    height: 300vh;
+    display: none;
+}
+.pt-m{
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position:  center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    padding: 9vw;
+}
+.pt-m h1{
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 45px;
+    font-weight:500;
+    line-height: 1;
+}
+.pt-m p{
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 3vw;
+}
+#pt1-m{
+    background-image: url(https://selemen.liqium.com/img/b1.jpg);
+}
+#pt2-m{
+    background-image: url(https://selemen.liqium.com/img/b2.jpg);
+}
+#pt3-m{
+    background-image: url(https://selemen.liqium.com/img/b3.jpg);
+}
 #page6{
     height: 100vh;
     width: 100%;
     background-color: #18191F;
-    padding: 0 40px;
+    padding: 0 2vw;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -663,7 +752,7 @@ height: 100%;
     height: 55vh;
     width: 100%;
     background-color: #151519;
-    padding: 0 40px;
+    padding: 0 2vw;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -868,17 +957,17 @@ height: 100%;
     display: flex;
     align-items: end;
     color: #fff;
-    padding: 40px;
+    padding: 0 2vw;
 }
 #page14 h1{
-    width: 48%;
+    width: 45%;
     font-weight: 500;
     font-size: 52px;
     line-height: 1;
     margin-bottom: 150px;
 }
 #line14{
-    width: 100%;
+    width: calc(100% - 4vw);
     height: 1px;
     background-color: #ffffff5f;
     position: absolute;
@@ -894,6 +983,46 @@ height: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%,0);
+}
+#page14-pt{
+    height: 90vh;
+    width: 100%;
+    padding: 0 2vw;
+}
+#page14-pt .form{
+    position: relative;
+    width: 100%;
+    height: 18vh;
+    display: flex;
+    padding-top: 1vw;
+}
+#page14-pt .form .fl{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff5f;
+}
+#page14-pt .form .flh{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 100%;
+    background-color: #ffffff5f;
+}
+.form h4{
+    color: #A9ABB5;
+    font-weight: 400;
+}
+#page14-pt .form .contact:nth-child(2){
+    padding-left: 1.5vw;
+}
+#page14-pt .form .contact{
+    width: 50%;
 }
 #page15{
     height: 120vh;
@@ -911,7 +1040,7 @@ height: 100%;
     object-position: 0% 10%;
 }
 #page15 .elem:nth-child(2){
-    padding: 60px 40px 0;
+    padding: 60px 2vw 0;
 }
 #page15 .elem:nth-child(2) .info{
     height: 30%;
@@ -932,7 +1061,7 @@ height: 100%;
     position: relative;
     height: 100vh;
     width: 100%;
-    padding: 0 40px;
+    padding: 0 2vw;
     display: flex;
     justify-content: end;
     flex-direction: column;
@@ -985,4 +1114,265 @@ height: 100%;
 }
 span{
     display: inline-block;
+}
+
+
+@media (max-width:600px) {
+    nav{
+        padding: 3vw 4vw;
+    }
+    nav img{
+        display: block;
+        height: 5vw;
+    }
+    #nav-left h4{
+        display: none;
+    }
+    #nav-left{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+    #nav-left #menu-line{
+        gap: 1vw;
+    }
+    #nav-left .line{
+        width: 15vw;
+        height: .7vw;
+    }
+    nav h4{
+        font-weight: 500;
+        font-size: 6vw;
+    }
+    nav button{
+        display: none;
+    }
+    #page2 #down{
+        top: -20vh;
+        height: 20vh;
+    }
+    #down h4{
+        font-size: 15px;
+    }
+    
+    #page2{
+        height: 80vh;
+    }
+    #page2 h2{
+        font-size: 30px;
+    }
+    #page2 h1{
+        font-size: 50px;
+        letter-spacing: 0;
+        font-family: aty;
+    }
+    #page2 img{
+        width: 80%;
+        bottom: 22%;
+        height:27%;
+    }
+    #page2 #line{
+        display: none;
+    }
+    #page3{
+        display: none;
+    }
+    #page3-mobile{
+        display: block;
+    }
+    #page4{
+        height: 120vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    
+    }
+    #page4 div{
+        width: 45%;
+    }
+    #page4 div img{
+        transform-origin: left;
+    }
+    #page5{
+        display: none;
+    }
+    #page5-mobile{
+        display: block;
+    }
+    #page6{
+        height: 80vh;
+    }
+    #elem1{
+        padding: 8px 0;
+        padding-top: 13vh;
+    }
+    #elem1 h4{
+        font-size: 12px;
+        font-weight: 400;
+    }
+    #elem2{
+        padding:5vh;
+    }
+    #elem2 button{
+        padding: 12px 27px;
+    }
+    #elem3{
+        justify-content: start;
+        flex-direction: column;
+        margin-top: 130px;
+        text-align: center;
+    }
+    #elem3 h4{
+        font-size: 30px;
+        font-weight: 500;
+        color: #ffffff;
+    }
+    #para{
+        width: 70%;
+        margin-top: 18vw;
+    }
+    #para p{
+        font-size: 15px;
+        color: #ffffff97;
+        text-align: center;
+        line-height: 1.5;
+    }
+    #linee{
+        left: 50%;
+        bottom: -28%;
+        transform: translateX(-50%);
+    }
+   
+    
+#page7{
+    height: 40vh;
+}
+#slide7{
+    white-space: nowrap;
+}
+#slide7 h1{
+    font-size: 25vw;
+    font-weight:500;
+    font-family: aty;
+}
+#page8{
+    height: 30vh;
+}
+
+#page9{
+    padding-top: 120px;
+    padding-bottom: 100px;
+    height: 90vh;
+}
+#page9 h1{
+    font-size:11vw;
+}
+#page9 #ig93{
+    bottom: 0%;
+}
+#page10{
+    height: 20vh;
+}
+#page10 #li2{
+    height: 20vh;
+}
+#page11{
+    display: none;
+}
+#page12{
+    height: 40vh;
+    justify-content:center;
+    padding-bottom: 0;
+}
+#page12 h1 {
+    color: #fff;
+    font-size: 30px;
+    line-height: 1;
+    margin-top: 0;
+}
+#page12 p {
+    margin-top: 10px;
+}
+#page13 #one,#page13 #three{
+    display: none;
+}
+#page13 .s1{
+    width: 100%;
+}
+#page14 {
+    height: 30vh;
+}
+#page14 h1 {
+    width: 80%;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+#line14-v{
+    display: none;
+}
+#page14-pt {
+    height: 50vh;
+    padding-top: 10vw;
+}
+#page14-pt .form {
+    position: relative;
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5vw;
+}
+#page14-pt .form .contact {
+    width: 100%;
+}
+#page14-pt .form .contact:nth-child(2) {
+    display: none;
+}
+.flh{
+    display: none;
+}
+#page15 {
+    height: 80vh;
+    width: 100%;
+}
+#page15 .elem:nth-child(2) {
+    padding: 0 2vw 0;
+}
+#footer {
+    position: relative;
+    height: 50vh;
+    width: 100%;
+    padding: 0 2vw;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+}
+#footer h3 {
+    font-weight: 300;
+    color: #ffffff5d;
+    margin-bottom: 150px;
+    font-size: 15px;
+    text-align: center;
+}
+#foot h1 {
+    font-size: 22vw;
+    font-weight: 500;
+    font-family: aty;
+    color: #ffffff20;
+    letter-spacing: 0;
+    line-height: 1;
+}
+#footer #bottom h2 {
+    font-weight: 400;
+    font-size: 4vw;
+    color: #ffffff81;
+}
+#fl {
+    display: none;
+}
 }

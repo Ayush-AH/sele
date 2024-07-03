@@ -210,6 +210,26 @@ function page3() {
             scrub: 2
         }
     })
+
+    var overs = document.querySelectorAll("#page3 .over")
+    overs.forEach(function (over) {
+        over.addEventListener("mouseenter", function () {
+            for (var i = 0; i < overs.length; i++) {
+                if (overs[i] !== over) {
+                    overs[i].querySelector(".igs").classList.remove("hover")
+                }
+                else {
+                    over.querySelector(".igs").classList.add("hover")
+                }
+            }
+        })
+    })
+    overs.forEach(function (over) {
+        over.addEventListener("mouseleave", function () {
+            overs[1].querySelector(".igs").classList.add("hover")
+            overs[0].querySelector(".igs").classList.remove("hover")
+        })
+    })
 }
 page3()
 function page8() {
@@ -367,25 +387,47 @@ function page13() {
 page13()
 
 
-function page14(){
-    
-var tl14 = gsap.timeline({
-    scrollTrigger: {
-        trigger: "#page14",
-        scroller: "#main",
-        // markers:true,
-        start: "top 30%",
-        end: "top 10%",
-        scrub: 2,
-    }
-})
-tl14
-    .from("#line14-v", {
-        height: "0"
-    }, "h")
-    .from("#line14", {
-        width: "0"
-    }, "h")
+function page14() {
+
+    var tl14 = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#page14",
+            scroller: "#main",
+            // markers:true,
+            start: "top 30%",
+            end: "top 10%",
+            scrub: 2,
+        }
+    })
+    tl14
+        .from("#line14-v", {
+            height: "0"
+        }, "h")
+        .from("#line14", {
+            width: "0"
+        }, "h")
+
+        var tl14 = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#page14-pt",
+                scroller: "#main",
+                // markers:true,
+                start: "top 85%",
+                end: "top 68%",
+                scrub: 2,
+            }
+        })
+        tl14
+            .from(".fl", {
+                width: "0",
+                duration:1,
+                stagger:{
+                    amount:0.5
+                }
+            },"h")  
+            .from(".flh", {
+                height: "0",
+            },"h")  
 
 }
 page14()
@@ -431,45 +473,45 @@ function footer() {
 }
 footer()
 
-function menupage(){
-    
-document.querySelector(".open").addEventListener("click", function () {
-    gsap.to("#menu-page", {
-        top: 0,
-        duration: .3
-    })
-})
-document.querySelector("#close").addEventListener("click", function () {
-    gsap.to("#menu-page", {
-        top: "-100%",
-        duration: .3
-    })
-})    
+function menupage() {
 
-var hs = document.querySelectorAll("#menu-txt h4")
-hs.forEach(function(h){
-    h.addEventListener("mouseenter",function(){
-        for(var i = 0;i < hs.length;i++){
-            if(hs[i] !== h){
-                gsap.to(hs[i],{
-                    opacity:.4
-                })
-            }
-            else{
-                gsap.to(h,{
-                    opacity:1
-                })
-            }
-        }
+    document.querySelector(".open").addEventListener("click", function () {
+        gsap.to("#menu-page", {
+            top: 0,
+            duration: .3
+        })
     })
-})
-hs.forEach(function(h){
-    h.addEventListener("mouseleave",function(){
-                gsap.to(h,{
-                    opacity:1
-                })
+    document.querySelector("#close").addEventListener("click", function () {
+        gsap.to("#menu-page", {
+            top: "-100%",
+            duration: .3
+        })
     })
-})
+
+    var hs = document.querySelectorAll("#menu-txt h4")
+    hs.forEach(function (h) {
+        h.addEventListener("mouseenter", function () {
+            for (var i = 0; i < hs.length; i++) {
+                if (hs[i] !== h) {
+                    gsap.to(hs[i], {
+                        opacity: .4
+                    })
+                }
+                else {
+                    gsap.to(h, {
+                        opacity: 1
+                    })
+                }
+            }
+        })
+    })
+    hs.forEach(function (h) {
+        h.addEventListener("mouseleave", function () {
+            gsap.to(hs, {
+                opacity: 1
+            })
+        })
+    })
 
 }
 menupage()
