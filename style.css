@@ -13,6 +13,132 @@ width: 100%;
  height: 100%;
  background-color: #151519;
 }
+body::-webkit-scrollbar{
+    display: none;
+}
+.c-scrollbar{
+    background-color:#A9ABB5;
+    width: .5vw;
+    opacity: 1 !important;
+}
+.c-scrollbar_thumb{
+    width: .5vw;
+    margin-right: -.001vw;
+}
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .8vw 2vw;
+    color: #A9ABB5;
+}
+#nav-left{
+    display: flex;
+    align-items: center;
+    gap: 2.4vw;
+    cursor: pointer;
+}
+#nav-left #menu-line{
+    display: flex;
+    flex-direction: column;
+    gap: .5vw;
+}
+#nav-left .line{
+    width: 4.6vw;
+    height: .1vw;
+    background: linear-gradient(to right, #a9abb52e ,#6b6c70);
+}
+nav h4{
+    font-weight: 500;
+    font-size: .8vw;
+}
+nav button{
+    padding: 1vw 2.1vw;
+    border-radius: 50px;
+    border: 1px solid #5555566e;
+    background-color: transparent;
+    color: #A9ABB5;
+}
+nav button:hover{
+    background-color: #5555566e;
+}
+#menu-page{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    z-index: 9;
+    background-color: #26262A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2vw;
+    padding-bottom: 0;
+}
+#close{
+    height: 2vw;
+    width: 2vw;
+    background-image: url(https://selemen.liqium.com/img/s8.svg);
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    top: 1.2vw;
+    right: 1.2vw;
+    cursor: pointer;
+}
+#menu-txt{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#menu-page h4{
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 3.3vw;
+    font-weight: 500;
+    margin-bottom: 1.3vw;
+    font-family: aty;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+#menu-page button{
+    padding: 1vw 2vw;
+    border-radius: 50px;
+    background-color:#5555566e;
+    color: #a9abb5ac;
+    border: none;
+    margin-top: 3vw;
+    font-size: .8vw;
+    margin-bottom: 3.8vw;
+}
+#menu-page h3{
+    font-size: .8vw;
+    font-weight: 500;
+    color: #A9ABB5;
+    line-height: 1.5;
+}
+#menu-btm{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+    color: #fff;
+    padding: 2.3vw 0;
+    border-top: 1px solid #a9abb534;
+}
+#menu-btm h2{
+    font-size: .8vw;
+    font-weight: 500;
+    letter-spacing: -1px;
+}
 #main{
     width: 100%;
     overflow: hidden;
@@ -342,7 +468,7 @@ height: 100%;
 #page6{
     height: 100vh;
     width: 100%;
-    /* background-color: red; */
+    background-color: #18191F;
     padding: 0 40px;
     display: flex;
     align-items: center;
@@ -442,6 +568,7 @@ height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #18191F;
 }
 #slide7{
     white-space: nowrap;
