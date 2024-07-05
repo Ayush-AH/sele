@@ -2,6 +2,10 @@
     font-family: aty ;
     src: url(./AtypDisplay-Regular\ \(1\).ttf);
 }
+@font-face {
+    font-family: gilroy ;
+    src: url(./Gilroy-Regular.ttf);
+}
 *{
 margin: 0;
 padding: 0;
