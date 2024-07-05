@@ -74,7 +74,7 @@ nav button:hover{
     height: 100vh;
     width: 100%;
     position: fixed;
-    top: -100%;
+    top: -150%;
     left: 0;
     z-index: 9;
     background-color: #26262A;
@@ -1148,6 +1148,105 @@ span{
     nav button{
         display: none;
     }
+    #menu-page {
+        padding-top: 3vw;
+    }
+    #close {
+        height: 7vw;
+        width: 7vw;
+        background-image: url(https://selemen.liqium.com/img/s8.svg);
+        background-size: contain;
+        background-position: center;
+        position: absolute;
+        top: 3vw;
+        right: 3vw;
+        cursor: pointer;
+    }
+    #menu-page img{
+        margin-left: -70%;
+        width:20%;
+    }
+    #menu-page h4{
+        font-size:8vw;
+        margin-bottom: 6vw;
+    }
+    #menu-page button{
+        padding: 1vw 4vw;
+        margin-top: 8vw;
+        font-size: 3vw;
+        font-weight: 500;
+        margin-bottom: 10vw;
+    }
+    #menu-page h3{
+        font-size: 3.5vw;
+        font-weight: 500;
+        color: #A9ABB5;
+        line-height: 1.7;
+    }
+    #menu-btm{
+        gap: 8vw;
+        padding: 5vw 0;
+        padding-bottom: 45vw;
+    }
+    #menu-btm h2{
+        font-size: 3.5vw;
+        font-weight: 300;
+        letter-spacing: 0;
+    }
+    #heading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+        overflow: hidden;
+        margin-bottom: 50px;
+    }
+    #ig1{
+        width: 30%;
+        height: 13%;
+        right: 12%;
+        bottom: 40%;
+        z-index: 99;
+    }
+    #ig2{
+        z-index: 0;
+        width: 30%;
+        height: 16%;
+        left: 9%;
+        bottom: 45%;
+        z-index: 4;
+    }
+    #ig3{
+        top: 25%;
+        width: 25%;
+        height: 10%;
+        left: 18%;
+        z-index: 9;
+    }
+    #ig4{
+        display: none;
+    }
+    #ig5{
+        width: 30%;
+        height: 12%;
+        bottom:26%;
+        right: 18%;
+        z-index: 3;
+    }
+    #ig6{
+        width: 32%;
+        height: 22%;
+        right: 18%;
+        top: 28%;
+        z-index: 2;
+    }
+    #ig7{
+        width: 45%;
+        height: 35%;
+        bottom: 35%;
+        z-index: 1;
+    }
+
     #page2 #down{
         top: -20vh;
         height: 20vh;
@@ -1343,6 +1442,9 @@ span{
 #page15 .elem:nth-child(2) {
     padding: 0 2vw 0;
 }
+#page15 .elem:nth-child(2) .info{
+    margin-top: 2vw;
+}
 #footer {
     position: relative;
     height: 50vh;
@@ -1376,3 +1478,4 @@ span{
     display: none;
 }
 }
+

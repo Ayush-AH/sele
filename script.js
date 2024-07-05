@@ -107,36 +107,43 @@ function page1() {
         .to("#ig1", {
             x: "130%",
             y: "155%",
+            opacity:.2
         }, "a")
         .to("#ig2", {
             x: "-80%",
             y: "200%",
             delay: .04,
+            opacity:.2
         }, "a")
         .to("#ig3", {
             x: "-70%",
             y: "-140%",
             delay: .06,
+            opacity:.2
         }, "a")
         .to("#ig4", {
             x: "140%",
             y: "-150%",
             delay: .10,
+            opacity:.2
         }, "a")
         .to("#ig5", {
             x: "110%",
             y: "140%",
             delay: .14,
+            opacity:.2
         }, "a")
         .to("#ig6", {
             x: "150%",
             y: "-190%",
             delay: .18,
+            opacity:.2
         }, "a")
         .to("#ig7", {
             x: "-80%",
             y: "-180%",
             delay: .23,
+            opacity:.2
         }, "a")
         .to("#page1 h4", {
             opacity: 0,
@@ -471,7 +478,7 @@ function footer() {
 
 
 }
-footer()
+// footer()
 
 function menupage() {
 
@@ -483,7 +490,7 @@ function menupage() {
     })
     document.querySelector("#close").addEventListener("click", function () {
         gsap.to("#menu-page", {
-            top: "-100%",
+            top: "-150%",
             duration: .3
         })
     })
@@ -515,3 +522,37 @@ function menupage() {
 
 }
 menupage()
+
+
+if (!window.matchMedia("(max-width: 600px)").matches) {
+    footer()
+}
+// //small screen
+
+if (window.matchMedia("(max-width: 600px)").matches) {
+    function footer() {
+        var clutter = ""
+        document.querySelector("#footer h1").textContent.split("").forEach(function (letter) {
+            clutter += `<span>${letter}</span>`
+        })
+        document.querySelector("#footer h1").innerHTML = clutter
+    
+        var tle = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#foot",
+                scroller: "#main",
+                start: "top 95%",
+                end: "top 90%",
+                scrub: 2,
+            }
+        })
+        tle
+            .from("#foot h1 span", {
+                y: "-100%",
+                stagger: -0.2
+            })
+    
+    
+    }
+    footer()
+}
