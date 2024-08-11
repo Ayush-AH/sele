@@ -271,15 +271,24 @@ function page5() {
         }
     })
     tl5
-        .to("#pt1", {
-            clipPath: "ppolygon(0 100%, 100% 100%, 100% 100%, 0 100%)",
-        }, "a")
-        .to("#pt2", {
-            clipPath: "polygon(0 100%, 100% 100%, 100% 0%, 0 0%)",
-        }, "a")
-        .to("#pt3", {
-            clipPath: "polygon(0 100%, 100% 100%, 100% 0%, 0 0%)",
-        })
+        tl5.to("#pt1",{
+            clipPath:`polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)`,
+            backgroundPosition:"0 200%"
+        },"a")
+        
+        tl5.to("#pt2",{
+            clipPath:` polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)`,    
+            backgroundPosition:"0 100%"
+        },"a")
+        
+        tl5.to("#pt2",{
+            clipPath:`polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)`,
+            backgroundPosition:"0 200%"
+        },"b")
+        tl5.to("#pt3",{
+            clipPath:`polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)`,
+            backgroundPosition:"0 100%"
+        },"b")
 }
 page5()
 
